@@ -1,0 +1,339 @@
+/* Justin Meister
+   11/17/2020
+
+   color palette:
+   #00307A
+   #077C8C
+   #00DB87
+   #09B81B
+   #5AB000
+
+   The headers and sidebar of the page make use of five unique Dulaney-pattern images that I created, each of which use a different color from the palette. The colors of the links are based on the base color of the top header. */
+
+/* import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@700&family=Montserrat:wght@300&display=swap');
+/* animation code */
+@keyframes fadein {
+  from {
+    opacity: 0;
+  } /* fade in from 0% to 100% opacity */
+  to {
+    opacity: 1;
+  }
+}
+@keyframes grow {
+  from {
+    padding-top: 0px;
+  } /* grow header from 0px top padding to full top padding */
+  to {
+    padding-top: 30px;
+  }
+}
+@keyframes grow-sub {
+  from {
+    padding-top: 0px;
+  } /* grow subheaders from 0px top padding to full top padding */
+  to {
+    padding-top: 15px;
+  }
+}
+@keyframes slide {
+  from {
+    left: -260px;
+  } /* slide sidebar in from the left */
+  to {
+    left: -246px;
+  }
+}
+/* basic rules */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  animation: fadein 2s;
+  opacity: 1.0;
+}
+/* basic elements */
+/* change formatting of all links on page */
+a {
+  color: #00236d;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color .3s ease-out; /* add color change animation */
+}
+a:hover {
+  color: #1c56af; /* change color from dark to medium blue on hover */
+}
+/* change formatting of all <abbr> tags */
+abbr {
+  font-size: 16px;
+  transition: color .3s ease-out, font-size .2s ease-out; /* add color and size change animation */
+}
+abbr:hover {
+  color: #555;
+  font-size: 18px; /* change color to gray and increase size on hover */
+}
+/* change formatting of header */
+header {
+  position: relative;
+  margin: 0px;
+  top: 0px;
+  left: 0px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 80px;
+  margin-bottom: 10px; /* add padding and position to header */
+  color: #FFFFFF;
+  background-image: url("header01.png"); /* add background image and keep its position fixed */
+  background-attachment: fixed;
+  animation: grow 2.5s; /* apply growth animation */
+}
+/* change typeface and font size of headers */
+header h1 {
+  font-family: 'Goldman', cursive;
+  font-size: 50px;
+}
+header h2 {
+  font-family: 'Goldman', cursive;
+  font-size: 30px;
+}
+/* change formatting of <abbr> in header */
+header h2 abbr {
+  font-family: 'Goldman', cursive;
+  font-size: 30px;
+  color: #FFFFFF;
+  opacity: 1;
+  transition: opacity .3s ease-out; /* add opacity animation to <abbr> tag */
+}
+header h2 abbr:hover {
+  color: #FFFFFF;
+  opacity: 0.6; /* change opacity */
+  font-size: 30px;
+}
+/* change formatting of paragraph */
+#zen-summary p {
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  line-height: 1.5;
+}
+/* change style of subheader */
+#zen-preamble h3 {
+  position: relative;
+  margin: 0px;
+  top: 0px;
+  left: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 80px;
+  padding-right: 80px;
+  margin-top: 10px;
+  margin-bottom: 10px; /* add padding, margin, and position to subheader */
+  font-family: 'Goldman', cursive; /* change typeface */
+  font-size: 22px;
+  color: #FFFFFF;
+  background-image: url("header02.png"); /* add background image and keep its position fixed */
+  background-attachment: fixed;
+  animation: grow-sub 2s; /* apply growth animation */
+}
+/* change formatting of paragraph */
+#zen-preamble p {
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  line-height: 1.5;
+}
+/* change style of subheader */
+#zen-explanation h3 {
+  position: relative;
+  margin: 0px;
+  top: 0px;
+  left: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 80px;
+  padding-right: 80px;
+  margin-top: 10px;
+  margin-bottom: 10px; /* add padding, margin, and position to subheader */
+  font-family: 'Goldman', cursive; /* change typeface */
+  font-size: 22px;
+  color: #FFFFFF;
+  background-image: url("header03.png"); /* add background image and keep its position fixed */
+  background-attachment: fixed;
+  animation: grow-sub 2s; /* apply growth animation */
+}
+/* change formatting of paragraph */
+#zen-explanation p {
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  line-height: 1.5;
+}
+/* change style of subheader */
+#zen-participation h3 {
+  position: relative;
+  margin: 0px;
+  top: 0px;
+  left: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 80px;
+  padding-right: 80px;
+  margin-top: 10px;
+  margin-bottom: 10px; /* add padding, margin, and position to subheader */
+  font-family: 'Goldman', cursive; /* change typeface */
+  font-size: 22px;
+  color: #FFFFFF;
+  background-image: url("header04.png"); /* add background image and keep its position fixed */
+  background-attachment: fixed;
+  animation: grow-sub 2s; /* apply growth animation */
+}
+/* change formatting of paragraph */
+#zen-participation p {
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  line-height: 1.5;
+}
+/* change style of subheader */
+#zen-benefits h3 {
+  position: relative;
+  margin: 0px;
+  top: 0px;
+  left: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 80px;
+  padding-right: 80px;
+  margin-top: 10px;
+  margin-bottom: 10px; /* add padding, margin, and position to subheader */
+  font-family: 'Goldman', cursive; /* change typeface */
+  font-size: 22px;
+  color: #FFFFFF;
+  background-image: url("header03.png"); /* add background image and keep its position fixed */
+  background-attachment: fixed;
+  animation: grow-sub 2s; /* apply growth animation */
+}
+/* change formatting of paragraph */
+#zen-benefits p {
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  line-height: 1.5;
+}
+/* change style of subheader */
+#zen-requirements h3 {
+  position: relative;
+  margin: 0px;
+  top: 0px;
+  left: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 80px;
+  padding-right: 80px;
+  margin-top: 10px;
+  margin-bottom: 10px; /* add padding, margin, and position to subheader */
+  font-family: 'Goldman', cursive; /* change typeface */
+  font-size: 22px;
+  color: #FFFFFF;
+  background-image: url("header02.png"); /* add background image and keep its position fixed */
+  background-attachment: fixed;
+  animation: grow-sub 2s; /* apply growth animation */
+}
+/* change formatting of paragraph */
+#zen-requirements p {
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  line-height: 1.5;
+}
+/* change formatting of footer */
+footer {
+  position: relative;
+  margin: 0px;
+  top: 0px;
+  left: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px; /* add padding, margin, and position to subheader */
+  background-image: url("header01.png"); /* add background image and keep its position fixed */
+  background-attachment: fixed;
+  animation: grow-sub 2s; /* apply growth animation */
+}
+/* change formatting of links in footer */
+footer a {
+  padding-left: 12px;
+  padding-right: 12px;
+  font-family: 'Goldman', cursive; /* change typeface */
+  font-size: 22px;
+  color: #FFFFFF;
+  opacity: 1;
+  transition: opacity .3s ease-out; /* add opacity change animation */
+}
+footer a:hover {
+  color: #FFFFFF;
+  opacity: 0.6; /* change opacity */
+}
+/* change formatting of sidebar */
+aside {
+  position: absolute;
+  top: 170px;
+  left: -246px; /* keep the sidebar mostly off the screen at first */
+  background-image: url("header05.png");
+  background-attachment: fixed; /* apply background image */
+  color: #FFFFFF;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 20px; /* change padding */
+  border-radius: 0px 15px 15px 0px; /* add rounded corners to the right side of the sidebar */
+  width: 200px;
+  transition: left .7s ease-in; /* add slide animation */
+  animation: slide 3s;
+}
+aside:hover {
+  left: 0px; /* when the user hovers over the exposed edge of the sidebar, it will be brought into full view */
+}
+/* change formatting of headers within sidebar */
+aside h3 {
+  padding-top: 12px;
+  padding-bottom: 2px;
+	font-size: 17.5px;
+}
+/* change formatting of list entries in sidebar */
+aside li {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  list-style-type: square;
+}
+/* change formatting of links in sidebar */
+aside a {
+  color: #FFFFFF;
+  opacity: 1;
+  transition: opacity .3s ease-out; /* add opacity change animation */
+}
+aside a:hover {
+  color: #FFFFFF;
+  opacity: 0.6; /* change opacity */
+}
+/* change formatting of <abbr> in sidebar */
+aside abbr {
+  color: #FFFFFF;
+  opacity: 1;
+  transition: opacity .3s ease-out, font-size .2s ease-out;; /* add opacity and size change animation */
+}
+aside abbr:hover {
+  color: #FFFFFF;
+  opacity: 0.6;
+  font-size: 18px; /* change opacity and size */
+}
